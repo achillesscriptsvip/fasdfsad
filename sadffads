@@ -1,0 +1,94 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local key = Instance.new("ScreenGui")
+local key_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local submit = Instance.new("TextButton")
+local getkey = Instance.new("TextButton")
+
+--Properties:
+
+key.Name = "key"
+key.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+key.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+key_2.Name = "key"
+key_2.Parent = key
+key_2.BackgroundColor3 = Color3.fromRGB(26, 27, 28)
+key_2.Position = UDim2.new(0.344285727, 0, 0.306733161, 0)
+key_2.Size = UDim2.new(0, 402, 0, 258)
+
+TextLabel.Parent = key_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.25124377, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Rebirth Champions"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+TextBox.Parent = key_2
+TextBox.BackgroundColor3 = Color3.fromRGB(58, 59, 60)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0728465244, 0, 0.233718038, 0)
+TextBox.Size = UDim2.new(0, 253, 0, 31)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "Enter Key"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+
+submit.Name = "submit"
+submit.Parent = key_2
+submit.BackgroundColor3 = Color3.fromRGB(58, 59, 60)
+submit.BorderSizePixel = 0
+submit.Position = UDim2.new(0.723880589, 0, 0.232558146, 0)
+submit.Size = UDim2.new(0, 80, 0, 31)
+submit.Font = Enum.Font.SourceSans
+submit.Text = "Submit"
+submit.TextColor3 = Color3.fromRGB(255, 255, 255)
+submit.TextSize = 14.000
+
+getkey.Name = "getkey"
+getkey.Parent = key_2
+getkey.BackgroundColor3 = Color3.fromRGB(58, 59, 60)
+getkey.BorderSizePixel = 0
+getkey.Position = UDim2.new(0.0739552379, 0, 0.397649258, 0)
+getkey.Size = UDim2.new(0, 342, 0, 39)
+getkey.Font = Enum.Font.SourceSans
+getkey.Text = "Get Key"
+getkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+getkey.TextSize = 14.000
+
+-- Scripts:
+
+local function LGBBOZ_fake_script() -- submit.Script 
+	local script = Instance.new('Script', submit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.TextBox.Text == "23131232114124144" then
+			loadstring(game:HttpGet("https://www.soggy-ware.cf"))()
+			wait(0.5)
+			script.Parent.Parent.Parent.key.Visible = false
+		end
+	end)
+end
+coroutine.wrap(LGBBOZ_fake_script)()
+local function MVRKNJZ_fake_script() -- getkey.Script 
+	local script = Instance.new('Script', getkey)
+
+	local copy = "https://workink.co/3Li/getthekey"
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	    script.parent.Text = "Copied"
+	    script.parent.TextColor3 = Color3.new(0,255,0)
+	    local copy = "https://workink.co/3Li/getthekey"
+		setclipboard(tostring(copy))
+	end)
+	
+end
+coroutine.wrap(MVRKNJZ_fake_script)() 
